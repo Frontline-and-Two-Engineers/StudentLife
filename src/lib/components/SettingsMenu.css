@@ -1,3 +1,9 @@
+.settings-container {
+    padding: 65px;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+
 .settings-card {
     width: 90%;
     max-width: 500px;

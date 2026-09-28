@@ -1,0 +1,14 @@
+.mainmenu-bg {
+    background-image: url("/assets/bg/mainmenu.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 65px;
+}
+
+.container-bg-and-shadow {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    box-shadow: 0 0 15px #000;
+}

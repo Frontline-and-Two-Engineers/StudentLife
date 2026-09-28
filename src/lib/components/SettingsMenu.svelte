@@ -1,18 +1,19 @@
 <script>
     import './SettingsMenu.css';
+    import './Utils.css'
     import { useGameContext } from '$lib/__index__.svelte';
     const game = useGameContext();
 </script>
 
-<main class="container settings-container">
-    <div class="settings-card">
+<main class="container settings-container mainmenu-bg">
+    <div class="settings-card container-bg-and-shadow">
         <div class="settings-header">
-            <h1>Game Settings</h1>
+            <h1>Настройки игры</h1>
         </div>
 
         <div class="settings-body">
             <div class="setting-row">
-                <label for="speed-range" class="label">Text Speed:</label>
+                <label for="speed-range" class="label">Скорость текста:</label>
                 <div class="slider-container">
                     <input
                         id="speed-range"
@@ -24,16 +25,16 @@
                     />
                     <span class="speed-value">
                         {#if game.textSpeed === 11}
-                            Instant
+                            Моментально
                         {:else}
-                            Speed {game.textSpeed}
+                            Скорость: {game.textSpeed}
                         {/if}
                     </span>
                 </div>
             </div>
 
             <div class="setting-row">
-                <label for="volume-range" class="label">Master Volume:</label>
+                <label for="volume-range" class="label">Общая громкость:</label>
                 <div class="slider-container">
                     <input
                         id="volume-range"
@@ -51,7 +52,7 @@
         </div>
 
         <div class="settings-footer">
-            <button onclick={() => game.currentScreen = 'MENU'} class="back-btn">Back</button>
+            <button onclick={() => game.currentScreen = 'MENU'} class="back-btn">Назад</button>
         </div>
     </div>
 </main>
