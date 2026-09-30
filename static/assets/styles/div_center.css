@@ -8,8 +8,15 @@
     justify-content: center;
     align-items: center;
     transition: opacity 0.4s ease;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .div_center.dr-hide-active {
+    animation: none;
     opacity: 0;
 }

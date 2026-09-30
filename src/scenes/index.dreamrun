@@ -59,6 +59,8 @@
 
 [pause 5000 block/]
 
+[image show "{bgassets}/bus_stop.png" mc_room 1 "{cssassets}/div_center.css" "{cssassets}/img_center.css"/]
+
 ###
 
 > "И вот, наступило первое сентября. Та самая дата, что я ждал ещё с момента переписки в чате группы!"
