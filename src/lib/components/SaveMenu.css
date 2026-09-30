@@ -30,23 +30,33 @@
 
 .tab {
     padding: 8px 22px;
-    background: transparent;
-    color: #000000;
     border: 2px solid #000000;
     font-weight: bold;
     font-size: 1.05rem;
     letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000000;
+    color: white;
     cursor: pointer;
-    transition: background 0.1s, color 0.1s;
+    transition: transform 0.1s ease-in-out;
 }
 
-.tab:hover {
+.tab:hover:not(.active) {
     background: #000000;
     color: #ffffff;
+    transform: scale(1.02);
 }
 
 .tab.active {
-    background: #ff0000;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000000;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
     color: #ffffff;
     border-color: #ff0000;
 }
@@ -68,8 +78,9 @@
     display: flex;
     flex-direction: column;
     padding: 0;
-    background: #ffffff;
+    background: #8a8a8a;
     border: 2px solid #000000;
+    border-radius: 10px;
     cursor: pointer;
     text-align: left;
     transition: border-color 0.1s, transform 0.05s;
@@ -108,10 +119,10 @@
 .slot-thumb.placeholder {
     background: repeating-linear-gradient(
         45deg,
-        #ffffff,
-        #ffffff 10px,
-        #f0f0f0 10px,
-        #f0f0f0 20px
+        #7a7a7a,
+        #7a7a7a 10px,
+        #2b2b2b 10px,
+        #2b2b2b 20px
     );
     border-bottom: 2px solid #000000;
 }
@@ -139,7 +150,7 @@
 
 .slot-stamp {
     font-size: 0.8rem;
-    color: #ff0000;
+    color: #000000;
     font-weight: bold;
     letter-spacing: 0.5px;
     white-space: nowrap;
@@ -170,6 +181,8 @@
     letter-spacing: 1px;
     text-align: center;
     flex-grow: 1;
+    color: #fff;
+    text-shadow: 2px 2px #000;
 }
 
 .save-footer button {
@@ -195,17 +208,21 @@
 }
 
 .save-footer .back {
-    background: #ff0000;
     color: #ffffff;
-    border-color: #ff0000;
     padding: 8px 18px;
     font-size: 0.95rem;
     letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000000;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
 }
 
 .save-footer .back:hover {
-    background: #ff7e7e;
-    border-color: #ff7e7e;
+    transform: scale(1.02);
 }
 
 /* --- Media Queries targeting standard pocket-sized devices --- */

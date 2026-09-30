@@ -350,15 +350,15 @@
                     class="toolbar-btn"
                     onclick={() => openSaveMenu('SAVE')}
                     disabled={!game.isGameStarted}
-                >Save</button>
+                >Сохр.</button>
                 <button
                     class="toolbar-btn"
                     onclick={() => openSaveMenu('LOAD')}
-                >Load</button>
+                >Загр.</button>
                 <button
                     class="toolbar-btn"
                     onclick={exitToMenu}
-                >Menu</button>
+                >Выйти</button>
             </div>
 
             {#if game.currentSpeaker}

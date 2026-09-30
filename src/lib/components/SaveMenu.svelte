@@ -3,7 +3,6 @@
     import './SaveMenu.css';
     import { useGameContext } from '$lib/__index__.svelte';
     import {
-        SAVE_STORAGE,
         SAVE_SLOTS_PER_PAGE,
         SAVE_SLOTS_TOTAL,
     } from '$lib/client/config.js';
@@ -88,7 +87,7 @@
     }
 </script>
 
-<main class="container save-container">
+<main class="container save-container mainmenu-bg">
     <header class="save-header">
         <button
             class="tab"
@@ -134,8 +133,8 @@
 
     <footer class="save-footer">
         <button onclick={prevPage} disabled={page === 0}>◀</button>
-        <span>Page {page + 1} / {totalPages}</span>
+        <span>Страница {page + 1} / {totalPages}</span>
         <button onclick={nextPage} disabled={page >= totalPages - 1}>▶</button>
-        <button class="back" onclick={goBack}>Back</button>
+        <button class="back" onclick={goBack}>Назад</button>
     </footer>
 </main>

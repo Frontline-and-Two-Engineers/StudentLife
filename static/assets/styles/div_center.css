@@ -1,0 +1,10 @@
+.div_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease;
+}
+
+.div_center.dr-hide-active {
+    opacity: 0;
+}

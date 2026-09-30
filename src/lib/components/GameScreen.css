@@ -29,18 +29,27 @@
     font-size: 1.25rem;
     font-weight: bold;
     border-bottom: none;
-    background-color: #000000;
-    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000000;
+    color: white;
+    text-shadow: 1px 1px #000;
+    transition: transform 0.1s ease-in-out;
 }
 
 .text-box {
     padding: 25px;
     min-height: 100px;
-    cursor: pointer;
     position: relative;
-    background-color: #000000;
     color: #ffffff;
     user-select: text;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000000;
+    color: white;
+    transition: transform 0.1s ease-in-out;
 }
 
 .text-box p {
@@ -50,6 +59,7 @@
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text;
+    text-shadow: 1px 1px #000;
 }
 
 .click-hint {
@@ -147,27 +157,32 @@
 
 .interface-toolbar {
     position: absolute;
-    top: -40px;
+    bottom: 160px;
     right: 0;
     display: flex;
-    gap: 4px;
+    gap: 8px;
     z-index: 6;
+    flex-direction: column;
 }
 
 .toolbar-btn {
     padding: 10px 20px;
-    background: #000000;
-    color: #ffffff;
     border: none;
     font-weight: bold;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
     cursor: pointer;
-    transition: background 0.1s;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000000;
+    text-shadow: 1px 1px #000;
+    color: white;
+    transition: transform 0.1s ease-in-out;
 }
 
 .toolbar-btn:hover:not(:disabled) {
-    background: #3a3a3c;
+    transform: scale(1.02);
 }
 
 .toolbar-btn:disabled {
