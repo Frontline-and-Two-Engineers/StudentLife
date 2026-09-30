@@ -4,4 +4,5 @@ export const mc = new Character('Миша');
 export const st = new Character('Стёпа');
 export const tm = new Character('Тимур');
 
+export const bgassets = new String("/assets/bg");
 export const cssassets = new String("/assets/styles");

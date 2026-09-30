@@ -1,4 +1,6 @@
-[image show "/assets/bg/mc_room.png" mc_room 0 "{cssassets}/div_center.css" "{cssassets}/img_center.css"/]
+[image show "{bgassets}/black.png" black 0 "{cssassets}/div_center.css" "{cssassets}/img_center.css"/]
+
+[image show "{bgassets}/mc_room.png" mc_room 1 "{cssassets}/div_center.css" "{cssassets}/img_center.css"/]
 
 > "Обыденным августовским днём я, впрочем как и всегда, занимался самыми обычными делами, которыми занимаются, как мне кажется, чуть ли не все подростки моего возраста - играл в видеоигры."
 
