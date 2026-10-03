@@ -1,0 +1,20 @@
+.sprite {
+    pointer-events: auto;
+    
+    height: 85vh;
+    width: auto;
+    
+    animation: ddlcEntrance 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    transform-origin: bottom center;
+}
+
+@keyframes ddlcEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

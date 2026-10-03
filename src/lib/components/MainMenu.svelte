@@ -1,6 +1,8 @@
 <script>
     import './MainMenu.css'
     import './Utils.css'
+    import '/static/assets/styles/div_center.css'
+    import '/static/assets/styles/img_center.css'
     import { useGameContext } from '$lib/__index__.svelte';
     const game = useGameContext();
 
@@ -15,11 +17,14 @@
     }
 </script>
 
-<main class="container menu-container mainmenu-bg">
-    <div class="menu-screen container-bg-and-shadow">
-        <h1>Студ. Жизнь</h1>
-        <button onclick={() => game.startGame()} class="menu-btn">Новая игра</button>
-        <button onclick={openLoadMenu} class="menu-btn">Загрузить</button>
-        <button onclick={() => game.currentScreen = 'SETTINGS'} class="menu-btn settings-trigger">Настройки</button>
+<main class="mainmenu-bg">
+    <img src="/assets/bg/mainmenu.png" alt="Main Menu BG" class="img_center" />
+    <div class="div_center">
+        <div class="menu-screen container-bg-and-shadow">
+            <h1>Студ. Жизнь</h1>
+            <button onclick={() => game.startGame()} class="menu-btn">Новая игра</button>
+            <button onclick={openLoadMenu} class="menu-btn">Загрузить</button>
+            <button onclick={() => game.currentScreen = 'SETTINGS'} class="menu-btn settings-trigger">Настройки</button>
+        </div>
     </div>
 </main>

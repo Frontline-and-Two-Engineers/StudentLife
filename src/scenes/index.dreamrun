@@ -59,7 +59,7 @@
 
 [pause 5000 block/]
 
-[image show "{bgassets}/bus_stop.png" mc_room 1 "{cssassets}/div_center.css" "{cssassets}/img_center.css"/]
+[image show "{bgassets}/bus_stop.png" bus_stop 1 "{cssassets}/div_center.css" "{cssassets}/img_center.css"/]
 
 ###
 
@@ -69,17 +69,27 @@
 
 > "Вдруг я чувствую на своём плече чью-то руку. Обернувшись, я замечаю парня лет восемнадцати."
 
+[image show "{st_hof}" st 2 "{container_csssprite}" "{csssprite}"]
+
 ??? > "Привет! Слушай, а это ты - Мишка Соловьёв?"
 
 :mc: > "Ну да, я. А откуда ты меня знаешь?"
 
+[image modify "{st_hos}" st 2 "{container_csssprite}" "{csssprite}"]
+
 :st: > "Мы с тобой в группе одной! Переписывались вчера, не помнишь? Стёпа я. Я тогда ещё признался, что на специальность любимую пошёл."
 
+[image modify "{st_hof}" st 2 "{container_csssprite}" "{csssprite}"]
+
 :mc: > "Блин, точно! Забылось как-то. А ты на фотке старше кажешься!"
+
+[image modify "{st_hc}" st 2 "{container_csssprite}" "{csssprite}"]
 
 :st: > "Владею навыками высшего искусства."
 
 :mc: > "Дай угадаю. В Фотошопе лицо обработал?"
+
+[image modify "{st_hos}" st 2 "{container_csssprite}" "{csssprite}"]
 
 :st: > "Ну конечно."
 

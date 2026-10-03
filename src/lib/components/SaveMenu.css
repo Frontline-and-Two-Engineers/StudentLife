@@ -14,6 +14,10 @@
     -webkit-overflow-scrolling: touch;
 }
 
+.save-menu-wrapper {
+    padding: 15px 15%;
+}
+
 .save-header {
     display: flex;
     align-items: center;

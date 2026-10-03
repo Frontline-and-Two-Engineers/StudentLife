@@ -88,53 +88,59 @@
 </script>
 
 <main class="container save-container mainmenu-bg">
-    <header class="save-header">
-        <button
-            class="tab"
-            class:active={game.saveMenuMode === 'LOAD'}
-            onclick={() => game.saveMenuMode = 'LOAD'}
-        >Load</button>
-        {#if canSave}
-            <button
-                class="tab"
-                class:active={game.saveMenuMode === 'SAVE'}
-                onclick={() => game.saveMenuMode = 'SAVE'}
-            >Save</button>
-        {/if}
-    </header>
+    <img src="/assets/bg/mainmenu.png" alt="Main Menu BG" class="img_center" />
 
-    <div class="save-grid">
-        {#each Array(SAVE_SLOTS_PER_PAGE) as _, i}
-            {@const slot = slotNumber(i)}
-            {@const meta = slots[slot]}
-            <button
-                class="slot"
-                class:empty={!meta}
-                onclick={() => onSlotClick(i)}
-                disabled={game.saveMenuMode === 'LOAD' && !meta}
-            >
-                {#if meta?.screenshot}
-                    <img class="slot-thumb" src={meta.screenshot} alt="" />
-                {:else}
-                    <div class="slot-thumb placeholder"></div>
+    <div class="div_center">
+        <div class="save-menu-wrapper container-bg-and-shadow">
+            <header class="save-header">
+                <button
+                    class="tab"
+                    class:active={game.saveMenuMode === 'LOAD'}
+                    onclick={() => game.saveMenuMode = 'LOAD'}
+                >Load</button>
+                {#if canSave}
+                    <button
+                        class="tab"
+                        class:active={game.saveMenuMode === 'SAVE'}
+                        onclick={() => game.saveMenuMode = 'SAVE'}
+                    >Save</button>
                 {/if}
+            </header>
 
-                <div class="slot-caption">
-                    <span class="slot-date">
-                        {meta ? formatDate(meta.timestamp) : '—'}
-                    </span>
-                    {#if meta?.savestamp}
-                        <span class="slot-stamp">{meta.savestamp}</span>
-                    {/if}
-                </div>
-            </button>
-        {/each}
+            <div class="save-grid">
+                {#each Array(SAVE_SLOTS_PER_PAGE) as _, i}
+                    {@const slot = slotNumber(i)}
+                    {@const meta = slots[slot]}
+                    <button
+                        class="slot"
+                        class:empty={!meta}
+                        onclick={() => onSlotClick(i)}
+                        disabled={game.saveMenuMode === 'LOAD' && !meta}
+                    >
+                        {#if meta?.screenshot}
+                            <img class="slot-thumb" src={meta.screenshot} alt="" />
+                        {:else}
+                            <div class="slot-thumb placeholder"></div>
+                        {/if}
+
+                        <div class="slot-caption">
+                            <span class="slot-date">
+                                {meta ? formatDate(meta.timestamp) : '—'}
+                            </span>
+                            {#if meta?.savestamp}
+                                <span class="slot-stamp">{meta.savestamp}</span>
+                            {/if}
+                        </div>
+                    </button>
+                {/each}
+            </div>
+
+            <footer class="save-footer">
+                <button onclick={prevPage} disabled={page === 0}>◀</button>
+                <span>Страница {page + 1} / {totalPages}</span>
+                <button onclick={nextPage} disabled={page >= totalPages - 1}>▶</button>
+                <button class="back" onclick={goBack}>Назад</button>
+            </footer>
+        </div>
     </div>
-
-    <footer class="save-footer">
-        <button onclick={prevPage} disabled={page === 0}>◀</button>
-        <span>Страница {page + 1} / {totalPages}</span>
-        <button onclick={nextPage} disabled={page >= totalPages - 1}>▶</button>
-        <button class="back" onclick={goBack}>Назад</button>
-    </footer>
 </main>
