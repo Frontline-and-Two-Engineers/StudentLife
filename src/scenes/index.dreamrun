@@ -59,9 +59,9 @@
 
 [pause 5000 block/]
 
-[image show "{bgassets}/bus_stop.png" bus_stop 1 "{cssassets}/div_center.css" "{cssassets}/img_center.css"/]
-
 ###
+
+[image show "{bgassets}/bus_stop.png" bus_stop 1 "{cssassets}/div_center.css" "{cssassets}/img_center.css"/]
 
 > "И вот, наступило первое сентября. Та самая дата, что я ждал ещё с момента переписки в чате группы!"
 
@@ -93,7 +93,14 @@
 
 :st: > "Ну конечно."
 
+[image hide st]
+[image hide bus_stop]
+
+[pause 5000 block/]
+
 ###
+
+[image show "{bgassets}/college_corridor.png" college_corridor 1 "{cssassets}/div_center.css" "{cssassets}/img_center.css"/]
 
 > "Спустя 40 минут мы уже были в колледже."
 
