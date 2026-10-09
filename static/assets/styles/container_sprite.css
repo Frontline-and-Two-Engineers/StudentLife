@@ -1,6 +1,6 @@
 .container_sprite {
     position: absolute;
-    bottom: 0;
+    top: 25px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -11,4 +11,9 @@
     
     pointer-events: none;
     overflow: hidden;
+}
+
+.container_sprite.dr-hide-active {
+    animation: none;
+    opacity: 0;
 }

@@ -1,17 +1,17 @@
 .sprite {
     pointer-events: auto;
     
-    height: 85vh;
+    height: 90vh;
     width: auto;
     
-    animation: ddlcEntrance 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation: spriteEntrance 0.25s cubic-bezier(0.25, 1, 0.5, 1) forwards;
     transform-origin: bottom center;
 }
 
-@keyframes ddlcEntrance {
+@keyframes spriteEntrance {
     from {
         opacity: 0;
-        transform: translateY(30px) scale(0.95);
+        transform: translateY(5px) scale(0.95);
     }
     to {
         opacity: 1;
